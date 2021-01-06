@@ -1,0 +1,7 @@
+export OS_AUTH_URL=www.make.com
+export OS_IDENTITY_API_VERSION=3
+export OS_PROJECT_NAME=cookie
+export OS_PROJECT_DOMAIN_NAME=cookies world
+export OS_USERNAME=juava
+export OS_USER_DOMAIN_NAME=jauvas.ocm
+export OS_PASSWORD=lslsss
