@@ -29,8 +29,8 @@ def userEntry():
             val2 = float(input("Please enter the second number: "))
             break
         except ValueError:
-            print("Please enter only a decimal or integer value or q or quit")
-    while round < 3 and userOps != "q":
+            print("Please enter only a decimal or integer value or q to quit")
+    while round < 3 or  userOps != "q":
         userOps = input("Please enter an operator ( + - * / ) ").strip()
         if userOps == "+":
             calcAdd(val1, val2)
@@ -44,12 +44,14 @@ def userEntry():
         elif userOps == "/":
             calcDiv(val1, val2)
             break
-        elif userOps not in operators_possible:
-            print('oopsy - please enter only + - * /  or q to quit: ')
-        elif round == 3: 
-            print('sorry - you had three tries, comeback later')
         elif userOps == "q":
             print("Goodbye!")
+            break
+        elif userOps not in operators_possible:
+            print('oopsy - please enter only + - * /  or q to quit: ')
+            round += 1
+        elif round == 3: 
+            print('sorry - you had three tries, comeback later') 
 
 userEntry()
 
